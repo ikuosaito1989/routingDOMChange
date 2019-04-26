@@ -13,12 +13,10 @@ export class Child2Component implements OnInit {
   ngOnInit() {
     console.log(this.testService.child2Title);
     setTimeout(() => {
-      if (!this.testService.child2Title) {
-        this.title = "child2";
-        this.testService.child2Title = this.title;
-        this.child2Img = "https://auth.classi.jp//img/pc/auth/logo-classi.png";
-        this.testService.child2Img = this.child2Img;
-      }
+      this.title = "child2";
+      this.testService.child2Title = this.title;
+      this.child2Img = "https://auth.classi.jp//img/pc/auth/logo-classi.png";
+      this.testService.child2Img = this.child2Img;
     }, 300);
   }
 }
